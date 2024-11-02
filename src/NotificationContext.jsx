@@ -2,10 +2,10 @@ import { createContext, useReducer } from "react";
 
 const notificationReducer = (state, action) => {
   switch (action.type) {
-    case 'VOTED': {
-      console.log(state);
-      return `anecdote`;
-    }
+    case 'SHOW': 
+      return action.payload;
+    case 'HIDE':
+      return '';
   }
 };
 
